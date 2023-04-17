@@ -41,11 +41,11 @@ for i in range(0, N):
     #       "%10.6f" % vx[i+1],"   ", "ax:",      # Use this only for data inspection to be aware of the correct calculated result.
     #       "%10.6f" % ax[i+1])
 
-plt.plot(x, '-', color='blue', label=r'$x(t)$')
-plt.plot(vx, '-', color='red', label=r'$v(t)$')
-plt.plot(ax, '-', color='black', label=r'$a(t)$')
-plt.xlabel('$Time \:\:-\:\: t[s]$', fontsize=14)
-plt.ylabel('$Approximations \:\:for \:\: \\vec{a}(t),\: \\vec{v}(t)\:\: and \:\: \\vec{x}(t)$', fontsize=14)
+plt.plot(x, '-', color='blue', label=r"$x(t)$")  #if you don't want to use LaTeX typography, use the text inside the single or double quote.
+plt.plot(vx, '-', color='red', label=r"$v(t)$")
+plt.plot(ax, '-', color='black', label=r"$a(t)$")
+plt.xlabel(r"$Time \:\:-\:\: t[s]$", fontsize=14)
+plt.ylabel(r"$Approximations \:\:for \:\: \vec{a}(t),\: \vec{v}(t)\:\: and \:\: \vec{x}(t)$", fontsize=14)
 plt.legend(fancybox=True, loc='upper right', scatterpoints=1, numpoints=1)
 plt.title(r"$One-dimensional \:\: Harmonic \:\: Oscillator$", fontdict={'fontsize': 17, 'fontweight': 'normal'})
 plt.grid(True)
