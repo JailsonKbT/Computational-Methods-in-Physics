@@ -16,8 +16,8 @@
 /*|     -- Advisor: Felipe Mondaini, D. Sc.                                                |*/
 /*|     -- Student: Jailson Oliveira Santana.                                              |*/
 /*|                                                                                        |*/
-/*|     Computational simulation of Bidimensional Ising Model for the Ferromagnetism       |*/
-/*|     On a Two-dimensional Square Lattice. The simulation was performed in the           |*/
+/*|     Computational simulation of Two-Dimensional Ising Model for the Ferromagnetism     |*/
+/*|     On a Two-Dimensional Square Lattice. The simulation was performed in the           |*/
 /*|     Microcanonical (NVE) and Canonical Ensemble (NVT) and is described by              |*/
 /*|     Heisemberg model for the Ferromagnetism using the Metropolis algorithm.            |*/
 /*|                                                                                        |*/
