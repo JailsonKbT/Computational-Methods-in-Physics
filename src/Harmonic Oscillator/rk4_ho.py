@@ -91,8 +91,8 @@ plt.plot(t, x, label='Numerical Position $x(t)$ (RK4)', color='blue', linestyle=
 plt.plot(t, vx, label='Numerical Velocity $v_x(t)$ (RK4)', color='red', linestyle='none', marker='s', markersize=3, alpha=0.6)
 
 # Plotting Analytical Solutions with solid lines
-plt.plot(t, x_ana, label='Analytical Position $x(t)$', color='black', linewidth=1.5)
-plt.plot(t, vx_ana, label='Analytical Velocity $v_x(t)$', color='orange', linewidth=1.5)
+plt.plot(t, x_ana, label=r' $x(t)\:\:(Analytical)$', color='black', linewidth=1.5)
+plt.plot(t, vx_ana, label=r'$v_x(t)\:\:(Analytical)$', color='orange', linewidth=1.5)
 
 plt.title('Harmonic Oscillator via RK4')
 plt.xlabel('Time (s)')
