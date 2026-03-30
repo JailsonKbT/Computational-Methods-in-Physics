@@ -5,7 +5,7 @@
 # Revised on Mar 29 2026
 
 
-#'''======================================================================================
+'''=======================================================================================
 #|                                                                                       |
 #|       This code is part of the computational work I carried out during my first       |
 #|        undergraduate research project.                                                |
@@ -23,6 +23,8 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import style
+style.use('classic')
 
 # Defining Physical Parameters:
 m = 1                       # Mass of the body (Moment of inertia).
@@ -74,20 +76,22 @@ t = np.linspace(0, max_t, steps + 1)
 x_ana = xt0 * np.cos(omega * t) + (vxt0 / omega) * np.sin(omega * t)
 vx_ana = -xt0 * omega * np.sin(omega * t) + vxt0 * np.cos(omega * t)
 
+# Plotting Analytical Solutions with solid lines
+plt.plot(t, x_ana, label=r' $\:x(t)\:\:(Analytical)$', color='black', linewidth=1.5)
+plt.plot(t, vx_ana, label=r'$v_x(t)\:\:(Analytical)$', color='orange', linewidth=1.5)
+
 # Plotting Numerical Approximations with with semi-transparent dots:
-plt.plot(t, x, label='Numerical Position $x(t)$ (RK2)', color='blue', linestyle='none', marker='o', markersize=3, alpha=0.6)
-plt.plot(t, vx, label='Numerical Velocity $v_x(t)$ (RK2)', color='red', linestyle='none', marker='s', markersize=3, alpha=0.6)
+plt.plot(t, x, label=r' $\:x(t)\:\:(Numerical)$', color='blue', linestyle='none', marker='o', markersize=5, alpha=0.6)
+plt.plot(t, vx, label=r'$v_x(t)\:\:(Numerical)$', color='red', linestyle='none', marker='o', markersize=5, alpha=0.6)
 # plt.plot(t, x, 'b-', label='Position $x(t)$')
 # plt.plot(t, vx, 'r-', label='Velocity $v_x(t)$')
 # plt.plot(t, vx, 'ro-', label='Velocity $v_x(t)$',markevery=2)
 
-# Plotting Analytical Solutions with solid lines
-plt.plot(t, x_ana, label=r' $x(t)\:\:(Analytical)$', color='black', linewidth=1.5)
-plt.plot(t, vx_ana, label=r'$v_x(t)\:\:(Analytical)$', color='orange', linewidth=1.5)
-
 plt.title('Harmonic Oscillator via RK2')
-plt.xlabel('Time (s)')
-plt.ylabel('Amplitude')
-plt.legend()
+plt.xlabel('Time [s]')
+# plt.ylabel('Amplitude')
+plt.ylabel(r'v$_{\mathregular{x}}$(t) and x(t) amplitudes')
+plt.legend(fancybox=True, loc='upper right', scatterpoints=1, numpoints=1)
+
 plt.grid(True)
 plt.show()
